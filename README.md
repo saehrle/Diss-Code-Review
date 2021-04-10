@@ -17,3 +17,5 @@ Dann noch eines um daraus gewisses RDF bereits vorzuberechnen.
 Die Word-Counts sind an sich egal und ich habe auch nicht verifiziert, ob das komplizierte System, diese beim Fund neuer Schreibungen upzudaten 100% funktioniert. Allerdings nutze ich den Word-Count nur ungefähr dafür, ggf. zu priorisieren, indem ich nur die häufigsten Wörter tiefenerschließe. Dafür sollte auch ein nicht-perfekter Word-Count genügen.
 
 Das Programm braucht, wenn man das ganze in `corpus` abgelegte (und nicht wirklich OCR-korrigierte) Korpus reinliest, relativ lang zum Rechnen. Nachdem die Processing-Reihenfolge allerdings nach Häufigkeit geordnet ist, wird das relativ schnell weniger.
+
+Wenn man beide Listen (stopswords und content words) hat, kann man auch relativ leicht prüfen, ob die Liste für ein verändertes Korpus noch passt: Serviert werden einem dann nur mehr die Types, die in keiner der beiden Listen auftauchen.
