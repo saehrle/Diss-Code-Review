@@ -27,7 +27,7 @@ while iteration_count > 40:
         bow_dict, content_words, STOP_WORDS_LIST = processOneBOWItem(corpus, bow_dict, content_words, STOP_WORDS_LIST)
         iteration_count -= 1
     bow_dict, reduced_corpus = updateBagOfWordsFromList(reduced_corpus, STOP_WORDS_LIST, content_words)
-    informAboutCurrentProgress(bow_dict, corpus)
+    informAboutCurrentProgress(bow_dict,  " ".join(reduced_corpus))
 
 # ------------------------------------------------------------------------------
 print("\n---\nLast 40!\n---\n")
@@ -36,7 +36,7 @@ while last_items:
     bow_dict, content_words, STOP_WORDS_LIST = processOneBOWItem(corpus, bow_dict, content_words, STOP_WORDS_LIST)
     last_items -= 1
 bow_dict, reduced_corpus =  updateBagOfWordsFromList(reduced_corpus, STOP_WORDS_LIST, content_words)
-informAboutCurrentProgress(bow_dict, corpus)
+informAboutCurrentProgress(bow_dict,  " ".join(reduced_corpus))
 # ------------------------------------------------------------------------------
 
 printMostFrequentContentWords(content_words)
