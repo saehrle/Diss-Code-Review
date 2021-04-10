@@ -97,10 +97,14 @@ def showProgressBar(total_corpus_len, total_bow_len, prefix="", size=60):
     The prefix argument currently get overwritten in the function.
     """
     progress = total_bow_len / total_corpus_len
+    #print("progress(" + str(progress) + ") = total_bow_len(" + str(total_bow_len) +") / total_corpus_len(" + str(total_corpus_len) + ")")
     todo = (1 - progress)*100 # ist in Prozent, daher 1- ...
-    print("Progress percentage is: " + str(progress))
+    #print("Progress percentage is: " + str(progress))
     #progress_length = int(size/progress)
-    progress_length = int(size/todo)
+    #progress_length = int(size/todo)
+    progress_length = int((todo/100)*size)
+    #print("todo is: " + str(todo) + ", progress_length: " + str(progress_length))
+    #print("Progress len = " + str(progress_length))
     prefix = "TODO " + str(int(todo)) + "%"
     print(("%s[%s%s] %i/%i\r" % (prefix, "#"*progress_length, "."*(size-progress_length), \
      total_bow_len, total_corpus_len)))
