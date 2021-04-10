@@ -8,6 +8,10 @@ Weiterhin ein Dings zum Annotieren und zum KWICs erstellen.
 
 Dann noch eines um daraus gewisses RDF bereits vorzuberechnen.
 
+# How to use:
+`python3 create_list_of_content_words.py`
+(ggf. vorher aus dem `corpus`-Ordner ein paar Files rausnehmen, damit es nicht ganz so viele Daten sind.
+
 # Teil 1: Das Finden der Content Words
 1. Alle möglichen Texte werden als Corpus eingelesen und tokenisiert (CLTK_Latin). Es wird auch ein Bag of Words daraus erstellt, allerdings nicht (!) lemmatisiert. Dies hat den Grund, dass gewisse Quelldaten der HAB alle möglichen Sonderzeichen in der Transkription erhalten haben - und wenn man die nicht jetzt einfach wegwerfen will, müssen all diese Sonderformen verzeichnet werden (dazu später). 
 2. Eine Basic-Stopword-Liste wird erstellt, sofern es noch keine gibt - ansonsten wird die bereits als `stop_word_list.txt` vorliegende eingelesen.
